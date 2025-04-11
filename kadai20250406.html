@@ -1,0 +1,70 @@
+<h1>CSSのFlexを使った横並びを表現してみましょう！</h1>
+
+<div class="flex">
+
+  <img src="run.jpg" width="300px" height="300px">
+  <img src="run.jpg" width="300px" height="300px">
+  <img src="run.jpg" width="300px" height="300px">
+  <img src="run.jpg" width="300px" height="300px">
+  <img src="run.jpg" width="300px" height="300px">
+
+</div>
+
+<h1>画像の上にテキストを表示させてみましょう！</h1>
+
+<div class="contents">
+
+   <p class="img"><img src="run.jpg"></p>
+
+   <p class="text">このテキストは画像の上に表示されます</p>
+
+</div>
+
+<h1>ulタグの「点（・）」をハートにしてみましょう！</h1>
+
+  <ul>
+    <li>リストタグ</li>
+    <li>リストタグ</li>
+    <li>リストタグ</li>
+    <li>リストタグ</li>
+  </ul>
+
+<style>
+  .flex {
+    display: flex;
+    justify-content: left;
+    gap: 20px; 
+    }
+    
+
+  .contents {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }  
+
+
+  .contents img{
+    position: absolute;
+    width: 100%;
+  }
+
+  
+  .text{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: white;
+  }  
+
+
+  ul{
+    list-style: none;
+  }
+
+  li::before{
+      content: "❤";
+      color: #f67690;
+  }
+
+</style>
